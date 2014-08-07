@@ -126,12 +126,12 @@
 
         .provider('formatFileSizeFilter', function () {
             var $config = this.defaults = {
-                // Byte units following the IEC format
+                // Byte units following the Ruby Format (IEC)
                 // http://en.wikipedia.org/wiki/Kilobyte
                 units: [
-                    {size: 1000000000, suffix: ' GB'},
-                    {size: 1000000, suffix: ' MB'},
-                    {size: 1000, suffix: ' KB'}
+                    {size: 1073741824, suffix: ' GB'},
+                    {size: 1048576, suffix: ' MB'},
+                    {size: 1024, suffix: ' KB'}
                 ]
             };
             this.$get = function () {
